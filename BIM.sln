@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIMDomain", "BIMDomain\BIMDomain.csproj", "{FB76CC24-2DBD-4E0B-897B-F36B7E0DD6A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIMWebApi", "BIMWebApi\BIMWebApi.csproj", "{D9ABC0BF-D269-4ED7-9B07-186A44947F2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIMMVC", "BIMMVC\BIMMVC.csproj", "{43929A57-5241-4B39-9DF7-A534AA5EB897}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB76CC24-2DBD-4E0B-897B-F36B7E0DD6A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB76CC24-2DBD-4E0B-897B-F36B7E0DD6A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB76CC24-2DBD-4E0B-897B-F36B7E0DD6A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB76CC24-2DBD-4E0B-897B-F36B7E0DD6A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9ABC0BF-D269-4ED7-9B07-186A44947F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9ABC0BF-D269-4ED7-9B07-186A44947F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9ABC0BF-D269-4ED7-9B07-186A44947F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9ABC0BF-D269-4ED7-9B07-186A44947F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43929A57-5241-4B39-9DF7-A534AA5EB897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43929A57-5241-4B39-9DF7-A534AA5EB897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43929A57-5241-4B39-9DF7-A534AA5EB897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43929A57-5241-4B39-9DF7-A534AA5EB897}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
