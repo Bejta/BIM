@@ -57,6 +57,9 @@ namespace BIMDomain.Models
         public List<Manufactury> GetAllManufacturies()
         {
             var returnValue = _unitOfWork.ManufacturyRepository.Get().ToList();
+
+
+
             return returnValue;
         }
         public List<Product> GetAllProducts()

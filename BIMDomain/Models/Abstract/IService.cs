@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BIMDomain.Models.Abstract
 {
-    interface IService
+    public interface IService
     {
         Guid getGuid();
 
