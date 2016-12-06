@@ -58,7 +58,12 @@ namespace BIMDomain.Models
         {
             var returnValue = _unitOfWork.ManufacturyRepository.Get().ToList();
 
-
+            //Populates Products for specific Manufactury
+            foreach(Manufactury m in returnValue)
+            {
+                m.Products = this.GetProductsByManufacturyId(m.Id);
+            }
+                
 
             return returnValue;
         }
