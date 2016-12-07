@@ -15,7 +15,7 @@ namespace BIMDomain.Controllers
     public class ManufacturyController : ApiController
     {
 
-        private BIMObjectContext db = new BIMObjectContext();
+        //private BIMObjectContext db = new BIMObjectContext();
         private IService _service;
 
         public ManufacturyController()
@@ -36,7 +36,8 @@ namespace BIMDomain.Controllers
         [ResponseType(typeof(Manufactury))]
         public IHttpActionResult GetManufactury(int id)
         {
-            Manufactury manufactury = db.Manufacturies.Find(id);
+            //Manufactury manufactury = db.Manufacturies.Find(id);
+            Manufactury manufactury = _service.GetManufactury(id);
             if (manufactury == null)
             {
                 return NotFound();
@@ -51,5 +52,29 @@ namespace BIMDomain.Controllers
             List<Product> products = _service.GetProductsByManufacturyId(manufactoryId);
             return products;
         }
+
+        // DELETE: api/Manufactury/5
+        [ResponseType(typeof(Manufactury))]
+        public IHttpActionResult DeleteManufactury(int id)
+        {
+            //Manufactury manufactury = db.Manufacturies.Find(id);
+            Manufactury manufactury = _service.GetManufactury(id);
+            if (manufactury == null)
+            {
+                return NotFound();
+            }
+
+           if(!_service.DeleteManufactury(manufactury))
+            {
+                return StatusCode(HttpStatusCode.InternalServerError);
+            }
+
+            //db.Manufacturies.Remove(manufactury);
+          
+
+            return Ok(manufactury);
+        }
+
+
     }
 }
