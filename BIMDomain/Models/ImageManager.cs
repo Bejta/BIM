@@ -51,6 +51,14 @@ namespace BIMDomain.Models
             return byteImage;
         }
 
+        public Image convertByteToImage (byte[] byteArray)
+        {
+           
+            MemoryStream memoryStream = new MemoryStream(byteArray);
+            Image img = Image.FromStream(memoryStream);
+            return img;
+        }
+
         public bool IsValidImage(Image image)
         {
             if (image.RawFormat.Guid == ImageFormat.Png.Guid)

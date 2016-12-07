@@ -90,9 +90,17 @@ namespace BIMDomain.Models
         {
             try
             {
-                _unitOfWork.ManufacturyRepository.Insert(manufactury);
-                _unitOfWork.Save();
-                return true;
+                Image _image = _imageManager.convertByteToImage(manufactury.Logo);
+
+                if (_imageManager.IsValidImage(_image))
+                {
+                    _image = _imageManager.ResizeImage(_image);
+                    manufactury.Logo = _imageManager.converterImageToByte(_image);
+                    _unitOfWork.ManufacturyRepository.Insert(manufactury);
+                    _unitOfWork.Save();
+                    return true;
+                }
+               
             }
             catch { }
 
